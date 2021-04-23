@@ -1,0 +1,39 @@
+ALGORITHM CheckPoint_Algo_Amal_H
+VAR
+    sentence: STRING;
+    a,b,c,i,x,y : INTEGER ;
+BEGIN
+    Read (sentence) ;
+    IF (sentence[sentence.length+1] = ".") THEN
+
+        FOR y FROM 0 TO sentence.length+1 STEP 1  DO
+        a := a+1;
+        END_FOR
+        Write("The number of characters in this sentence is ", a)
+
+        b:= 1 ;
+        IF (a =< 1) THEN
+            Write("The number of words in this sentence is  1 or less")
+        ELSE
+            FOR i FROM 1 TO sentence[i]="." STEP 1  DO
+                IF (sentence[i]=" ") THEN
+                    b := b+1 ;
+                END_IF
+            END_FOR
+        END_IF
+        Write("The number of words in this sentence is ", b)
+
+        c:= 0;
+        FOR x FROM 0 TO sentence.length STEP 1  DO
+            IF (sentence[x]="A"or"E"or"I"or"O"or"U"or"a"or"e"or"i"or"o"or"u"  ) THEN 
+                c := c+1 ;
+            END_IF
+        END_FOR
+        Write("The number of vowls in this sentence is ", c)
+
+    ELSE
+        Write("The sentence should end with a .")
+    END_IF
+
+
+END
